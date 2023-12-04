@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --background : #111;
+}
+
+.container{
+  padding: 8px;
+}
+
+.flex{display: flex;}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--background);
+  color: #fff;
+}
+
+nav h1{
+  font-size: 2rem;
+}
+ul{
+  padding: 0 12px;
+  list-style: none;
+  margin-right: auto;
+  margin-left: 1vw;
+}
+
+li{
+  font-size: 1.4rem;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: aliceblue;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 20vh;
+  background-color: var(--background);
+  color: #fff;
+}
+
+.book-list{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,0.5fr);
+  grid-template-rows: auto;
+}
+
+.book{
+  border: 1px solid black;
+  text-align: center;
+  margin: 0.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  background-color: #fff;
+}
+
+.book > img{
+  margin-top: auto;
+  width: 18vw;
+  height: 36vh;
+}
+
+.book:hover{
+  transform: scale(1.05);
+  transition: ease-in-out 0.4s;
+}
+.book > button{
+  padding: 12px;
+  background-color: var(--background);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 1vh;
+  width: 80%;
+}
+.book > button:hover{
+  background-color: #fff;
+  color: var(--background);
+  transition: ease-in-out 0.4s;
+}
+
+.book-details{
+  min-height: 80vh;
+  padding: 1rem;
+}
+
+.book-details h1{
+  font-size: 3rem;
+}
+.book-details h2{
+  font-size: 2rem;
+}
+.book-details p{
+  font-size: 1.2rem;
+  margin: 1vh 0;
+}
+.book-details-head{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-details-head > img{
+  min-height: 40vh;
+}
+
+.book-details-tail{
+  padding: 4vh 20%;
+}
+@media screen and (max-width : 1200px) {
+  .book-list{
+    grid-template-columns: repeat(3,0.5fr);
+  }
+  .book > img{
+    width: 24vw;
+    height: 36vh;
+  }
+  
+}
+
+@media screen and (max-width : 800px) {
+  .book-list{
+    grid-template-columns: repeat(2,0.5fr);
+  }
+  .book > img{
+    width: 36vw;
+    height: 36vh;
+  }
+  .book-details-tail{
+    padding: inherit;
+  }
+}
+
+@media screen and (max-width : 500px) {
+  .book-list{
+    grid-template-columns: auto;
+  }
+  .book > img{
+    width: 48vw;
+    height: 36vh;
+  }
+}
